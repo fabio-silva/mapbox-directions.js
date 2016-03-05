@@ -31,7 +31,7 @@ var Directions = L.Class.extend({
 
     setOrigin: function (origin) {
         var originCoords; 
-        var originMarker = undefined;
+        var originMarker;
         if(origin.lat && origin.lng){ //Find a better way to check if origin is a L.marker or not?
             originCoords = this._normalizeWaypoint(origin);
         }else{
@@ -50,7 +50,7 @@ var Directions = L.Class.extend({
 
     setDestination: function (destination) {
         var destinationCoords;
-        var destinationMarker = undefined;
+        var destinationMarker;
         if(destination.lat && destination.lng){ //Find a better way to check if destination is a L.marker or not?
             destinationCoords = this._normalizeWaypoint(destination);
         }else{
